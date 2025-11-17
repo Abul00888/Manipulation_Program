@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #themeName {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Theme Switcher Web Page</h1>
+    <p>This page demonstrates changing themes using JavaScript and DOM.</p>
+
+    <button id="themeBtn">Change Theme</button>
+
+    <div id="themeName">Light Mode</div>
+
+    <script>
+        let isDark = false;
+
+        document.getElementById("themeBtn").addEventListener("click", function () {
+            if (isDark) {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                document.getElementById("themeName").innerText = "Light Mode";
+                isDark = false;
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                document.getElementById("themeName").innerText = "Dark Mode";
+                isDark = true;
+            }
+        });
+    </script>
+</body>
+</html>
